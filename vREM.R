@@ -61,8 +61,7 @@ ses <- list(v = params$v * 0.1,
 rem360_boot(data, params, ses)
 
 # apply the real data, instead of the example which shows species per location (height)
-#rem_boot_data<-read.csv("~/Library/CloudStorage/OneDrive-WageningenUniversity&Research/Macroecology project/PhD projects/Shuiqing He/REM_vertical/data/for bootstrap/boostrap_all.csv")
-rem_boot_data<-read.csv("~/Library/CloudStorage/OneDrive-WageningenUniversity&Research/Macroecology project/PhD projects/Shuiqing He/REM_vertical/data/for bootstrap/boostrap_all.csv")
+rem_boot_data<-read.csv("boostrap_combined.csv")
 #rem_boot_data <- rem_boot_data[,c(1,10,12,15,16,19:24)]
 rem_boot_data <- rem_boot_data[,c(2,12,14,18,19,21:26)]
 
