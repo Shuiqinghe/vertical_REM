@@ -1,5 +1,5 @@
 # import data
-dat <- read.csv("coordinates_meter_all.csv")
+dat <- read.csv("coordinates_meter.csv")
 bmdat <- read.csv("body_mass.csv")
 
 # read packages 
