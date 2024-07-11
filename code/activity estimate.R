@@ -1,5 +1,3 @@
-rm(list=ls())
-
 library(stringr)
 library(do)
 library(dplyr)
@@ -7,11 +5,9 @@ library(stringr)
 library(readr)
 library(activity)
 
-setwd("~/Library/CloudStorage/OneDrive-WageningenUniversity&Research/Macroecology project/PhD projects/Shuiqing He/REM_vertical/data")
-
-observation_for_species <- read.csv("./ref_info_data/observations.csv", sep="," , header = TRUE)
-observation_for_pics <- read.csv("./ref_info_data/20240618-bardiya-assets.csv", sep="," , header = TRUE)
-media_for_pictimes <- read.csv("./ref_info_data/media.csv", sep="," , header = TRUE)
+observation_for_species <- read.csv("observations.csv", sep="," , header = TRUE)
+observation_for_pics <- read.csv("20240618-bardiya-assets.csv", sep="," , header = TRUE)
+media_for_pictimes <- read.csv("media.csv", sep="," , header = TRUE)
 
 # data merging
 media_for_pictimes <- media_for_pictimes[,c(5,7)]
