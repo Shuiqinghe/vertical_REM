@@ -1,10 +1,7 @@
-rm=list(ls())
-
 library(readr)
 library(dplyr)
 
-setwd("~/Library/CloudStorage/OneDrive-WageningenUniversity&Research/Macroecology project/PhD projects/Shuiqing He/REM_vertical/data")
-contact_effort <- read.csv("./for bootstrap/contact_effort.csv")
+contact_effort <- read.csv("contact_effort.csv")
 profile <- read.csv("./for bootstrap/profile_estimate_MLE_rectangle.csv")
 
 # first thing first, merge based on profile data
