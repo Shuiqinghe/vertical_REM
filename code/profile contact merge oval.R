@@ -3,9 +3,8 @@ rm=list(ls())
 library(readr)
 library(dplyr)
 
-setwd("~/Library/CloudStorage/OneDrive-WageningenUniversity&Research/Macroecology project/PhD projects/Shuiqing He/REM_vertical/data")
-contact_effort <- read.csv("./for bootstrap/contact_effort.csv")
-profile <- read.csv("./for bootstrap/profile_estimate_MLE.csv")
+contact_effort <- read.csv("contact_effort.csv")
+profile <- read.csv("profile_estimate_MLE.csv")
 
 # first thing first, merge based on profile data
 colnames(contact_effort)[3]<-"camera_type"
