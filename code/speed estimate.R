@@ -122,8 +122,11 @@ data <- data%>%group_by(scientificName)%>%mutate(hmean_speed_se=hmean(speed)[2])
 
 speed <- unique(data[,c(1,4,5)])
 
-# merge with group size
-group_size <- as.data.frame(table(data$scientificName))
-colnames(group_size) <- c("scientificName", "group_size")
-speed <- left_join(speed, group_size, by = "scientificName")
+# merge with sample size
+sample_size <- as.data.frame(table(data$scientificName))
+colnames(sample_size) <- c("scientificName", "sample_size")
+speed <- left_join(speed, sample_size, by = "scientificName")
+
+# export data
+write.csv(speed, "speed.csv")
 
