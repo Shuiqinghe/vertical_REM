@@ -2,7 +2,7 @@ library(readr)
 library(dplyr)
 
 contact_effort <- read.csv("contact_effort.csv")
-profile <- read.csv("./for bootstrap/profile_estimate_MLE_rectangle.csv")
+profile <- read.csv("profile_estimate_MLE_rectangle.csv")
 
 # first thing first, merge based on profile data
 colnames(contact_effort)[3]<-"camera_type"
