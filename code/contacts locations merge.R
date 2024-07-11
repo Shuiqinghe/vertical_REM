@@ -109,4 +109,5 @@ colnames(merged2)<-c("scientificName", "cameraheight", "cameratype", "contact_sp
 group<-c("Axis axis", "Axis porcinus","Canis aureus","Elephas maximus","Hystrix indica","Macaca mulatta","Muntiacus muntjak","Panthera tigris","Rhinoceros unicornis","Rusa unicolor","Semnopithecus schistaceus","Sus scrofa")
 merged2 <- merged2[merged2$scientificName%in%group,]
 merged2 <- unique(merged2)
-write_csv(merged2,"./for bootstrap/contact_effort.csv")
+
+write_csv(merged2,"contact_effort.csv")
