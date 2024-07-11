@@ -4,11 +4,10 @@ library(dplyr)
 library(readr)
 
 # import data (original exported reference information)
-setwd("~/Library/CloudStorage/OneDrive-WageningenUniversity&Research/Macroecology project/PhD projects/Shuiqing He/REM_vertical/data")
-observation <- read.csv("./ref_info_data/observations.csv", sep="," , header = TRUE)
-deployment_camera <- read.csv("./for bootstrap/deplyment_cameratype_workingtime.csv")
-deployment <- read.csv("./ref_info_data/deployments.csv", sep="," , header = TRUE)
-cameraheight <- read.csv("./ref_info_data/cameraheight.csv", sep="," , header = TRUE)
+observation <- read.csv("observations.csv", sep="," , header = TRUE)
+deployment_camera <- read.csv("deplyment_cameratype_workingtime.csv")
+deployment <- read.csv("deployments.csv", sep="," , header = TRUE)
+cameraheight <- read.csv("cameraheight.csv", sep="," , header = TRUE)
 
 # merge locations 
 merged <- left_join(x = observation, y = deployment, by = "deploymentID")
