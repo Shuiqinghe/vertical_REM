@@ -39,7 +39,7 @@ rem360_boot <- function(data, params, ses, reps=999){
     ucl_boot = quantile(samp, 0.975))
 }
 
-# Example with dummy data assuming constant speed and activity level per location (height)
+# Example with basic data assuming constant speed and activity level per location (height)
 
 n <- 50 # number of camera locations
 
@@ -96,7 +96,3 @@ for (species_name in species_list) {
 }
 
   results <- as.data.frame(cbind(results_list,error_list))
-
-library(tibble)
-results <- rownames_to_column(results, var = "scientificName")
-colnames(results) <- c("scientificName","vREM","vREM_se")
