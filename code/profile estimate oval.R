@@ -1,5 +1,3 @@
-rm=list(ls())
-
 # import data
 dat <- read.csv("coordinates_meter_combined.csv")
 bmdat <- read.csv("body_mass.csv")
