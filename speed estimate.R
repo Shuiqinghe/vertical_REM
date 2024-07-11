@@ -1,12 +1,8 @@
-rm(list=ls())
-
-setwd("~/Library/CloudStorage/OneDrive-WageningenUniversity&Research/Macroecology project/PhD projects/Shuiqing He/REM_vertical/data")
-
-obs_data <- read.csv("./ref_info_data/20240618-bardiya-observationpositions.csv", sep="," , header = TRUE)
-assets_data <- read.csv("./ref_info_data/20240618-bardiya-assets.csv", sep="," , header = TRUE)
-obs_origin <- read.csv("./ref_info_data/observations.csv", sep="," , header = TRUE)
-media <- read.csv("./back_up/ref_info_data/media.csv", sep="," , header = TRUE)
-cam_height <- read.csv("./back_up/ref_info_data/cameraheight.csv", sep="," , header = TRUE)
+obs_data <- read.csv("20240618-bardiya-observationpositions.csv", sep="," , header = TRUE)
+assets_data <- read.csv("20240618-bardiya-assets.csv", sep="," , header = TRUE)
+obs_origin <- read.csv("observations.csv", sep="," , header = TRUE)
+media <- read.csv("media.csv", sep="," , header = TRUE)
+cam_height <- read.csv("cameraheight.csv", sep="," , header = TRUE)
 
 # data merging
 colnames(assets_data)[12] <- "asset"
@@ -130,6 +126,4 @@ speed <- unique(data[,c(1,4,5)])
 group_size <- as.data.frame(table(data$scientificName))
 colnames(group_size) <- c("scientificName", "group_size")
 speed <- left_join(speed, group_size, by = "scientificName")
-  
-write.csv(speed,"./speed.csv")
 
