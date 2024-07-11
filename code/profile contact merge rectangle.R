@@ -36,4 +36,4 @@ gdata<-read.csv("./ref_info_data/group_size.csv")
 merge <- left_join(merge, gdata, by = "scientificName")
 colnames(merge)[19] <- "al_se"
 
-write_csv(merge,"./for bootstrap/boostrap_all_rectangle.csv")
+write_csv(merge,"boostrap_all_rectangle.csv")
