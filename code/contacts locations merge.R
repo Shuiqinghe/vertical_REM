@@ -3,7 +3,7 @@ library(readr)
 
 # import data (original exported reference information)
 observation <- read.csv("observations.csv", sep="," , header = TRUE)
-deployment_camera <- read.csv("deplyment_cameratype_workingtime.csv")
+deployment_camera <- read.csv("deplyment_cameratype.csv")
 deployment <- read.csv("deployments.csv", sep="," , header = TRUE)
 cameraheight <- read.csv("cameraheight.csv", sep="," , header = TRUE)
 
