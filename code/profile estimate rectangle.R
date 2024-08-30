@@ -92,6 +92,3 @@ bootstrap_results <- boot(data = data, statistic = calculate_integral, R = 1000)
 # calculate se for each integral result and add it to dataset
 se_integral_results <- apply(bootstrap_results$t, 2, sd)
 data$profile_se<-se_integral_results
-
-# save dataset
-write.csv(data,"profile_estimate_MLE_rectangle.csv")
